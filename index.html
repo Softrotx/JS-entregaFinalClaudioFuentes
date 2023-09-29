@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/funciones.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Pagina de Claudio Fuentes</title>
+</head>
+
+<body class="index">
+    
+    <div class="formulario login">
+        <div>
+            <h1>Inicio</h1>
+            <div class="cuentaDemo">
+                <strong>cuenta demo</strong>
+                <div class="toggler">
+                    <input id="toggler-1" name="toggler-1" type="checkbox" value="1">
+                    <label for="toggler-1">
+                        <svg class="toggler-on" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                            <polyline class="path check" points="100.2,40.2 51.5,88.8 29.8,67.5"></polyline>
+                        </svg>
+                        <svg class="toggler-off" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                            <line class="path line" x1="34.4" y1="34.4" x2="95.8" y2="95.8"></line>
+                            <line class="path line" x1="95.8" y1="34.4" x2="34.4" y2="95.8"></line>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <form id="loginUsr" class="formusr">
+            <input id="inputEmail" type="email" placeholder="email">
+            <input type="password" id="inputPass" placeholder="Contraseña">
+            <input id ="btnLog" type="submit" value="Ingresar" class="btnLoginRegistro">
+        </form>
+        <a href="./pages/registro.html">Registrar cuenta</a>
+    </div>
+    
+
+
+    <script src="./JS/login.js"></script>
+    
+
+
+</body>
+
+</html>

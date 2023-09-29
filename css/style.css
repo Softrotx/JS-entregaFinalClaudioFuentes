@@ -1,0 +1,270 @@
+/* switch */
+.toggler {
+  width: 36px;
+  margin: 5px auto;
+}
+
+.toggler input {
+  display: none;
+}
+
+.toggler label {
+  display: block;
+  position: relative;
+  width: 36px;
+  height: 18px;
+  border: 1px solid #d6d6d6;
+  border-radius: 18px;
+  background: #e4e8e8;
+  cursor: pointer;
+}
+
+.toggler label::after {
+  display: block;
+  border-radius: 100%;
+  background-color: #d7062a;
+  content: "";
+  animation-name: toggler-size;
+  animation-duration: 0.15s;
+  animation-timing-function: ease-out;
+  animation-direction: forwards;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+.toggler label::after, .toggler label .toggler-on, .toggler label .toggler-off {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 26px;
+  height: 26px;
+  transform: translateY(-50%) translateX(-50%);
+  transition: left 0.15s ease-in-out, background-color 0.2s ease-out, width 0.15s ease-in-out, height 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.toggler input:checked + label::after, .toggler input:checked + label .toggler-on, .toggler input:checked + label .toggler-off {
+  left: 75%;
+}
+
+.toggler input:checked + label::after {
+  background-color: #50ac5d;
+  animation-name: toggler-size2;
+}
+
+.toggler .toggler-on, .toggler .toggler-off {
+  opacity: 1;
+  z-index: 2;
+}
+
+.toggler input:checked + label .toggler-off, .toggler input:not(:checked) + label .toggler-on {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.toggler .path {
+  fill: none;
+  stroke: #fefefe;
+  stroke-width: 7px;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+@keyframes toggler-size {
+  0%, 100% {
+    width: 26px;
+    height: 26px;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+  }
+}
+@keyframes toggler-size2 {
+  0%, 100% {
+    width: 26px;
+    height: 26px;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* html */
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  margin-bottom: 0;
+  background-color: #01050D;
+  background-image: url("../medios/backgroundLogin.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+html .index {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+html .index .login div {
+  display: flex;
+  justify-content: space-between;
+}
+html .index .login div .cuentaDemo {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+html .index .formulario {
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
+  background-image: url("../medios/transparente.png");
+  background-position: center;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 0px 25px 20px 15px;
+  width: 300px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px 10px 10px 10px;
+}
+html .index .formulario a {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  color: azure;
+  width: 40%;
+}
+html .index .formulario .formusr {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+html .index .formulario .formusr .posNeg {
+  width: 20px;
+}
+html .index .formulario .formusr input {
+  width: 85%;
+  height: 20px;
+  margin: 2px;
+}
+html .index .formulario .formusr .btnLoginRegistro {
+  width: 100px;
+  margin-top: 20px;
+  font-size: 1rem;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+html .index .registro {
+  width: 300px;
+  height: 370px;
+}
+
+.swal2-center {
+  position: fixed;
+}
+
+.pagCuentas {
+  padding: 30px 40px;
+  font-size: 1rem;
+  color: white;
+  background-color: transparent;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pagCuentas h1 {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.pagCuentas main {
+  width: 90%;
+}
+.pagCuentas .ventana {
+  display: flex;
+  background-size: cover;
+}
+.pagCuentas .ventana .menu {
+  height: 500px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pagCuentas .ventana .menu a {
+  color: white;
+}
+.pagCuentas .ventana .menu button {
+  font-size: 1rem;
+  width: 15px;
+}
+.pagCuentas .ventana .menu li {
+  list-style: none;
+}
+.pagCuentas .ventana .ventanaUser {
+  padding: 25px;
+  border-radius: 30px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 550px;
+  background-image: url(../medios/transparente.png);
+  background-position: center;
+  background-size: cover;
+}
+.pagCuentas .ventana .ventanaUser img {
+  width: 150px;
+  height: 150px;
+  margin-right: 25px;
+  border-radius: 50%;
+}
+.pagCuentas .ventana .ventanaUser .avatarFlex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid;
+}
+.pagCuentas .ventana .ventanaUser .avatarFlex #modDatos {
+  display: flex;
+  flex-direction: column;
+}
+.pagCuentas .ventana .ventanaUser .avatarFlex #modDatos input {
+  border-radius: 5px;
+  border: none;
+  margin: 2px;
+}
+.pagCuentas .ventana .ventanaUser .userSeguridad {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.pagCuentas .ventana .ventanaUser .userSeguridad h2 {
+  margin-top: 20px;
+}
+.pagCuentas .ventana .ventanaUser .userSeguridad .btnSeguridad {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+.pagCuentas .ventana .ventanaUser .userSeguridad .btnSeguridad button {
+  width: 60%;
+  margin: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
