@@ -3,7 +3,7 @@ let usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioActivo')) || false
 
 
 /* fetch */
-fetch (URL('../usuariosdb/usuarios.json')).then((response) => response.json().then((json) => usuarios.push(...json)))
+fetch ('../usuariosdb/usuarios.json').then((response) => response.json().then((json) => usuarios.push(...json)))
 
 
 /* FUNCIONES DE LOGIN */
