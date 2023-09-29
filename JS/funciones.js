@@ -1,6 +1,6 @@
 let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 let usuarioActivo = JSON.parse(sessionStorage.getItem('usuarioActivo')) || false
-let usuariosDB = []
+
 
 /* fetch */
 fetch (URL('../usuariosdb/usuarios.json')).then((response) => response.json().then((json) => usuarios.push(...json)))
